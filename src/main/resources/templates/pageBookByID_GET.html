@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contenido WEB con Springboot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <h1>Busqueda de Librossss.....</h1>
+  <div th:if="${bookmodel == null}">
+    <div th:text=" 'ID de libro '+${id}+' no encontrado en la BD' "> </div>
+  </div>
+  <div th:unless="${bookmodel == null}">
+    Libro Encontrado con la siguiente información:
+    <div th:text=" 'ID: ' + ${bookmodel.id}"> </div>
+    <div th:text=" 'Nombre: ' + ${bookmodel.nombre}"> </div>
+    <div th:text=" 'Autor: ' + ${bookmodel.autor}"> </div>
+    <div th:text=" 'Editorial: ' + ${bookmodel.editorial}"> </div>
+ </div>
+
+</body>
+</html>

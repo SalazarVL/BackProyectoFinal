@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contenido WEB con Springboot</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Alta de Libro (Formulario)</h1>
+    <form action="#" th:action="@{/POSTRequestResult}" th:object="${bookmodel}" method="post">
+        <p>Name: <input type="text" th:field="*{nombre}"> </p>
+        <p>Autor: <input type="text" th:field="*{autor}"> </p>
+        <p>Editorial: <input type="text" th:field="*{editorial}"> </p>
+        <p><input type="submit" value="Submit">  </p>
+    </form>
+</body>
+</html>
